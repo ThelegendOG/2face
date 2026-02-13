@@ -1,0 +1,5 @@
+body { background: #0f172a; color: white; font-family: sans-serif; padding: 20px; text-align: center; }
+.container { max-width: 500px; margin: auto; background: #1e293b; padding: 30px; border-radius: 20px; }
+#showBtn { width: 100%; padding: 15px; background: #6366f1; border: none; color: white; font-weight: bold; border-radius: 10px; cursor: pointer; }
+#outputArea { margin-top: 20px; padding: 10px; border: 2px dashed #334155; border-radius: 10px; display: none; }
+#resImg { width: 100%; border-radius: 8px; }

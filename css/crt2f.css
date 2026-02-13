@@ -1,0 +1,7 @@
+body { background: #0f172a; color: white; font-family: sans-serif; padding: 20px; }
+.container { max-width: 500px; margin: auto; background: #1e293b; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.input-group { margin-bottom: 20px; text-align: left; }
+label { display: block; margin-bottom: 8px; color: #94a3b8; }
+input { width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 8px; box-sizing: border-box; }
+#genBtn { width: 100%; padding: 15px; background: #10b981; border: none; color: white; font-weight: bold; border-radius: 10px; cursor: pointer; margin-top: 10px; }
+#genBtn:hover { background: #059669; }
