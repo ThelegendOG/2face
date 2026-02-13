@@ -1,0 +1,6 @@
+body { background: #0f172a; color: white; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+.hub-container { text-align: center; width: 90%; max-width: 500px; }
+.btn-group { display: flex; flex-direction: column; gap: 20px; margin-top: 40px; }
+.btn { padding: 20px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; color: white; background: #1e293b; border: 1px solid #334155; }
+.btn:hover { background: #3b82f6; transform: translateY(-3px); }
+@media (min-width: 600px) { .btn-group { flex-direction: row; } .btn { flex: 1; } }
