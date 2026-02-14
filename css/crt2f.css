@@ -22,4 +22,37 @@ input { width: 100%; padding: 10px; background: #0f172a; border: 1px solid #3341
 #passInput, #viewPass {
     flex-grow: 1;
 }
+.main-footer {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+}
+
+.footer-line {
+    width: 50px;
+    height: 1px;
+    background: var(--border);
+    margin: 0 auto 15px auto;
+    opacity: 0.5;
+}
+
+.main-footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* Hover effect for a bit of flair */
+.main-footer p:hover {
+    color: var(--primary);
+    opacity: 1;
+    transition: 0.3s;
+}
 
