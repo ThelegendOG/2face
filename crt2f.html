@@ -1,15 +1,23 @@
-<link rel="stylesheet" href="css/crt2f.css">
 <div class="container">
-    <a href="index.html" style="color: #64748b; text-decoration: none;">← Back</a>
-    <h2>Create Section</h2>
-    <div class="input-group">
-        <label>Choose Face1 (Public)</label>
+    <link rel="stylesheet" href="css/crt2f.css">
+
+    <a href="index.html" class="back-link">← Back</a>
+    <h2>Create 2Face</h2>
+    <div class="card">
+        <label>Face 1 (Public)</label>
         <input type="file" id="face1" accept="image/*">
-    </div>
-    <div class="input-group">
-        <label>Choose Face2 (Secret)</label>
+        
+        <label>Face 2 (Secret)</label>
         <input type="file" id="face2" accept="image/*">
+        
+        <label>Set Password (Optional)</label>
+        <div style="display: flex; gap: 5px;">
+            <input type="password" id="passInput" placeholder="Password...">
+            <button type="button" id="togglePass" style="width: auto; background: #475569;">Show</button>
+        </div>
+        
+        <button id="genBtn" style="margin-top: 20px;">Generate & Download</button>
     </div>
-    <button id="genBtn">Generate & Download</button>
 </div>
 <script src="js/crt2f.js"></script>
+
