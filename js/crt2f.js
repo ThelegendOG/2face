@@ -141,3 +141,54 @@ function readFileAsync(file) {
         reader.readAsArrayBuffer(file);
     });
 }
+// --- DYNAMIC FILE TYPE SELECTOR (Devs 0.1 Update) ---
+const fileTypeSelector = document.getElementById('fileType');
+const secretInput = document.getElementById('secretFile');
+
+fileTypeSelector.addEventListener('change', function() {
+    const selectedType = this.value;
+
+    // Dynamically change the 'accept' attribute based on user choice
+    if (selectedType === 'image') {
+        // This will open the Image Gallery/Photos specifically on most phones
+        secretInput.setAttribute('accept', 'image/*');
+        console.log("Mode: Image Only Selection");
+    } 
+    else if (selectedType === 'video') {
+        secretInput.setAttribute('accept', 'video/*');
+        console.log("Mode: Video Only Selection");
+    } 
+    else if (selectedType === 'pdf') {
+        secretInput.setAttribute('accept', '.pdf, application/pdf');
+        console.log("Mode: PDF Only Selection");
+    }
+    
+    // Clear the previous selection to avoid format mismatch
+    secretInput.value = ""; 
+});
+
+// --- UPDATED STRICT VALIDATION (English Only) ---
+secretInput.addEventListener('change', function() {
+    const file = this.files[0];
+    if (!file) return;
+
+    const selectedType = fileTypeSelector.value;
+    let isValid = false;
+
+    // Strict Type Checking based on Dropdown Selection
+    if (selectedType === 'image' && file.type.startsWith('image/')) {
+        isValid = true;
+    } else if (selectedType === 'video' && file.type.startsWith('video/')) {
+        isValid = true;
+    } else if (selectedType === 'pdf' && file.type === 'application/pdf') {
+        isValid = true;
+    }
+
+    if (!isValid) {
+        alert("CRITICAL ERROR: File format does not match the selected Type (" + selectedType.toUpperCase() + ")!");
+        this.value = ""; // Reset input
+        return;
+    }
+
+    console.log("File Verified for VixM Project: " + file.type);
+});
