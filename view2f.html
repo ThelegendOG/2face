@@ -1,24 +1,47 @@
-<div class="container">
-    <a href="index.html" class="back-link">← Back</a>
-    <link rel="stylesheet" href="css/view2f.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View 2Face</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <h2>View Section</h2>
-    <div class="card">
-        <label>Select 2Face File</label>
-        <input type="file" id="fileInput" accept="image/jpeg">
+    <div class="container">
+        <a href="index.html" class="back-link">← Back Home</a>
+        <h2>Unlock 2Face</h2>
         
-        <label>Enter Password (If any)</label>
-        <div style="display: flex; gap: 5px;">
-            <input type="password" id="viewPass" placeholder="Password...">
-            <button type="button" id="toggleViewPass" style="width: auto; background: #475569;">Show</button>
+        <div class="input-group">
+            <label>Select 2Face File</label>
+            <input type="file" id="fileInput" accept="image/jpeg, image/jpg">
         </div>
-        
-        <button id="showBtn" style="margin-top: 20px;">Show 2Face</button>
+
+        <div class="input-group">
+            <label>Enter Password (If set)</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="password" id="viewPass" placeholder="Password...">
+                <button type="button" class="btn btn-alt" style="width: auto; margin:0;" onclick="toggleViewPass()">👁️</button>
+            </div>
+        </div>
+
+        <button id="showBtn" class="btn btn-primary">Reveal Secret</button>
+        <p id="errorMsg" style="color: #ef4444; display: none; margin-top: 10px;"></p>
+
+        <div id="resultArea" style="display: none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+            <p style="color: var(--success);">Secret Found! 🎉</p>
+            
+            <div id="mediaContainer"></div>
+
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button id="dlBtn" class="btn btn-success">Download</button>
+                <button id="shareBtn" class="btn btn-alt">Share</button>
+            </div>
+        </div>
     </div>
 
-    <div id="outputArea" style="display: none; margin-top: 20px;">
-        <img id="resImg" style="width: 100%; border-radius: 10px; border: 2px solid #3b82f6;">
-    </div>
-</div>
-<script src="js/view2f.js"></script>
+    <script src="js/view2f.js"></script>
+</body>
+</html>
+
 
