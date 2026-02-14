@@ -5,3 +5,21 @@ label { display: block; margin-bottom: 8px; color: #94a3b8; }
 input { width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 8px; box-sizing: border-box; }
 #genBtn { width: 100%; padding: 15px; background: #10b981; border: none; color: white; font-weight: bold; border-radius: 10px; cursor: pointer; margin-top: 10px; }
 #genBtn:hover { background: #059669; }
+.input-group div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#togglePass, #toggleViewPass {
+    min-width: 70px;
+    height: 40px;
+    margin: 0;
+    font-size: 0.8rem;
+    background: #475569;
+}
+
+#passInput, #viewPass {
+    flex-grow: 1;
+}
+

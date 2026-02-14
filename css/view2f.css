@@ -3,3 +3,20 @@ body { background: #0f172a; color: white; font-family: sans-serif; padding: 20px
 #showBtn { width: 100%; padding: 15px; background: #6366f1; border: none; color: white; font-weight: bold; border-radius: 10px; cursor: pointer; }
 #outputArea { margin-top: 20px; padding: 10px; border: 2px dashed #334155; border-radius: 10px; display: none; }
 #resImg { width: 100%; border-radius: 8px; }
+.input-group div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#togglePass, #toggleViewPass {
+    min-width: 70px;
+    height: 40px;
+    margin: 0;
+    font-size: 0.8rem;
+    background: #475569;
+}
+
+#passInput, #viewPass {
+    flex-grow: 1;
+}
